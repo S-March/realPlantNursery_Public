@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: realPlantNursery.CSPcbDoc   8/5/2021  10:10:30 AM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : realPlantNursery-RoundHoles.TXT
+ASCII SlotHoles File : realPlantNursery-SlotHoles.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        12mil (0.3048mm)         Round          109              11.30 Inch (286.97 mm)
+T2        27.6mil (0.70104mm)      Round          2                0.19 Inch (4.85 mm)
+T3        27.6mil (0.70104mm)      Slot           2                283.76 Inch (7207.42 mm)
+T4        40.2mil (1.02108mm)      Round          8                2.07 Inch (52.60 mm)
+T5        68.9mil (1.75006mm)      Round          2                0.20 Inch (5.00 mm)
+T6        114.2mil (2.90068mm)     Round          3         NPTH   3.07 Inch (78.05 mm)
+---------------------------------------------------------------------------
+Totals                                            126              300.59 Inch (7634.89 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:01

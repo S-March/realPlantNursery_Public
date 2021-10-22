@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Planty McPlantface</title>
+    <link rel="shortcut icon" href="./imageAssets/smLogo.png">
+    <link rel='stylesheet' href='./cssFiles/mainPage.css'>
+    <script src="./jsFiles/projectNames.js"></script>
+    <script src="./jsFiles/chart.js"></script> <!-- Credit: https://www.chartjs.org/ -->
+    <script src="./jsFiles/mainPage.js"></script>
+    <script src="./measuredData/moistureData.txt"></script>
+</head>
+
+<body onload="mainLoadPage()" onresize="reloadPage()">
+    <div class="topBodyContainer">
+        <div class="goldenRatioContainer" id="projectSprialContainer">
+        </div>
+    </div>
+    <div class="topBodyContainer">
+        <div class="goldenRatioContainer" id="projectSprialContainer">
+            <div class="goldenRatioPanel" id="instructionsPanel">
+                <div class="closePanelButton" onclick="closePanels()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topBodyContainer">
+        <div class="goldenRatioContainer" id="projectSprialContainer">
+            <div class="goldenRatioPanel" id="moisturePanel" style="background-image: url(projects/moisturePage/mediaAssets/imageAssets/moisturePlot.jpg)">
+                <canvas class="plotCanvas" id="moisturePlot"></canvas>
+                <div class="closePanelButton" onclick="closePanels()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topBodyContainer">
+        <div class="goldenRatioContainer" id="projectSprialContainer">
+            <div class="goldenRatioPanel" id="lightPanel" style="background-image: url(projects/lightPage/mediaAssets/imageAssets/lightPlot.jpg)">
+                <canvas class="plotCanvas" id="lightPlot"></canvas>
+                <div class="closePanelButton" onclick="closePanels()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topBodyContainer">
+        <div class="goldenRatioContainer" id="projectSprialContainer">
+            <div class="goldenRatioPanel" id="settingsPanel">
+                <div class="inputSettingsContainer">
+                    <div class="inputLabelContainer">
+                        plant name:
+                    </div>
+                    <input type="text" class="inputTextElement" id="plantNameInput" placeholder="planty mcplantface" oninput="updateNameText(this.value)">
+                </div>
+                <div class="inputSettingsContainer">
+                    <div class="inputLabelContainer">
+                        low water alert:
+                    </div>
+                    <div class="inputRangeSliderText" id="waterThresholdSliderText">
+                        25%
+                    </div>
+                    <input class="inputRangeSlider" id="waterThresholdSlider" type="range" min="0" max="100" value="25" oninput="updateSliderText(this.id, this.value)">
+                </div>
+                <div class="inputSettingsContainer">
+                    <div class="inputLabelContainer">
+                        sun exposure:
+                    </div>
+                    <select class="inputSelectorContainer" id="sunExposureSelect" oninput="updateSelect(this.value)">
+                        <option value="fullsun" selected>full sun</option>
+                        <option value="partialsun">partial sun</option>
+                        <option value="partialshade">partial shade</option>
+                        <option value="fullshade">full shade</option>
+                    </select>
+                </div>
+                <div class="inputSettingsContainer" id="settingsButtons">
+                    <div class="inputLabelContainer settingButtonUniversal" id="settingsMoreButton" onclick="togglePanel('moreSettingsPage')">
+                        more
+                    </div>
+                    <div class="inputLabelContainer settingButtonUniversal" onclick="saveSettings()">
+                        save
+                    </div>
+                </div>
+                <div class="closePanelButton" onclick="closePanels()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topBodyContainer">
+        <div class="goldenRatioContainer" id="projectSprialContainer">
+            <div class="goldenRatioPanel" id="moreSettingsPanel">
+                <div class="inputSettingsContainer">
+                    <div class="inputLabelContainer">
+                        calibrate
+                    </div>
+                    <div class="inputLabelContainer">
+                        moisture sensor:
+                    </div>
+                    <div class="inputLabelContainer settingButtonUniversal" id="calibrateMoistureButton" onclick="calibrateSensor('moisture')">
+                        start
+                    </div>
+                </div>
+                <div class="inputSettingsContainer">
+                    <div class="inputLabelContainer">
+                        silent mode:
+                    </div>
+                    <div class="inputLabelContainer settingButtonUniversal" id="enableSilentModeButton" onclick="silentModeButton()">
+                        enabled
+                    </div>
+                </div>
+                <div class="inputSettingsContainer">
+                    <div class="inputLabelContainer">
+                        low battery alert:
+                    </div>
+                    <div class="inputRangeSliderText" id="batteryThresholdSliderText">
+                        25%
+                    </div>
+                    <input class="inputRangeSlider" id="batteryThresholdSlider" type="range" min="0" max="100" value="25" oninput="updateSliderText(this.id, this.value)">
+                </div>
+                <div class="inputSettingsContainer" id="settingsButtons">
+                    <div class="inputLabelContainer settingButtonUniversal" id="settingsBackButton" onclick="togglePanel('settingsPage')">
+                        back
+                    </div>
+                    <div class="inputLabelContainer settingButtonUniversal" onclick="saveSettings()">
+                        save
+                    </div>
+                </div>
+                <div class="closePanelButton" onclick="closePanels()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--In case the JS files don't load in the captive portal-->
+<div class="goldenRatioCaptivePortalFallBack" id="backupInstructions">
+    Go to<br>PlantyMcPlantface.com<br>in your broweser to open the app!
+</div>
+
+</html>

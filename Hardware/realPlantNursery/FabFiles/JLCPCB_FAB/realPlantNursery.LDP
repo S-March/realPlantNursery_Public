@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: Z:\Documents\Github\realPlantNursery\Hardware\realPlantNursery\realPlantNursery.CSPcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=realplantnursery-roundholes.txt|LayerPairs=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=realplantnursery-slotholes.txt|LayerPairs=gtl,gbl
